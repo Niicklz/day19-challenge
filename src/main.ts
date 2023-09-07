@@ -1,6 +1,6 @@
 const date = new Date();
-let seconds: number;
-let hour: number;
+let seconds: number = new Date().getSeconds()
+let hour:number = getHours12();
 let minutes: number = date.getMinutes();
 const hourWithoutTransform = new Date().getHours().toString();
 const buttonThemeChange = document.getElementById(
@@ -61,6 +61,9 @@ const getFullMonth = () => {
 const fixedMinutes = (minutes: string) => minutes.length === 1 ? `0${minutes}` : minutes;
 document.getElementById("date")!.textContent = `${getFullDay()}, ${getFullMonth()} ${date.getDate()}`;
 document.getElementById("hour")!.textContent = `${hourWithoutTransform}:${fixedMinutes(minutes.toString())} ${getAMPMHour()}`;
+document.getElementById("minutesCircle")!.style.transform = `rotate(${270 + 6 * minutes}deg)`;
+document.getElementById("hourCircle")!.style.transform = `rotate(${270 + hour * 30}deg)`;
+document.getElementById("secondsCircle")!.style.transform = `rotate(${270 + 6 * seconds}deg)`;
 setInterval(() => {
   hour = getHours12();
   seconds = new Date().getSeconds();

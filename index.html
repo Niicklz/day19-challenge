@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Theme Clock</title>
+  </head>
+  <body>
+    <div id="app">
+      <button id="theme">Dark mode</button>
+      <div class="reloj">
+        <div class="seconds-circle" id="secondsCircle">
+          <div id="lane" class="lane"></div>
+        </div>
+        <div class="hour-circle" id="hourCircle">
+          <div id="lane2" class="lane2"></div>
+        </div>
+        <div class="minutes-circle" id="minutesCircle">
+          <div id="lane3" class="lane3"></div>
+        </div>
+      </div>
+      <span class="hour" id="hour"></span>
+      <span class="date" id="date"></span>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  transition: all 1s;
+}
+#app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  font-family: "Heebo", sans-serif;
+  
+  min-width: 300px;
+}
+.lane {
+  width: 96px;
+  height: 2px;
+  background-color: red;
+
+  position: absolute;
+  bottom: 50%;
+  top: 37%;
+  left: 100%;
+}
+.lane2 {
+  width: 60px;
+}
+.lane3 {
+  width: 88px;
+}
+.lane2,
+.lane3 {
+  height: 2px;
+  background-color: black;
+
+  position: absolute;
+  bottom: 50%;
+  top: 37%;
+  left: 100%;
+}
+
+.reloj {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.seconds-circle {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: rotate(-90deg);
+  z-index: 3;
+}
+.hour-circle,
+.minutes-circle {
+  width: 8px;
+  height: 8px;
+  background-color: yellow;
+
+  position: absolute;
+  top: 51%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.hour-circle {
+  transform: rotate(-90deg);
+}
+
+.minutes-circle {
+  transform: rotate(-60deg);
+}
+
+.hour {
+  font-size: 64px;
+  font-weight: 100;
+}
+.date {
+  color: #aaa;
+}
+
+button {
+  padding: 0.8rem;
+  background-color: black;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 12px;
+  border: none;
+  transition: all 1s;
+}
+
+.dark {
+  
+  background-color: black;
+  
+}
+.white-theme {
+  background-color: #fff;
+  color: black;
+}
+.dark-letters {
+  color: #fff;
+}

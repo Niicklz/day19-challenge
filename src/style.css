@@ -97,6 +97,7 @@ button {
   border-radius: 12px;
   border: none;
   transition: all 1s;
+  cursor: pointer;
 }
 
 .dark {

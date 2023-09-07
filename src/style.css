@@ -112,3 +112,18 @@ button {
 .dark-letters {
   color: #fff;
 }
+
+
+p .day {
+ padding: 0.5rem 0.7rem ;
+  background-color: black;
+  color: #aaa;
+  font-weight: bold;
+  border-radius: 50%;
+}
+p .dark-date {
+  background-color: #fff;
+  color: black;
+  font-weight: bold;
+}
+

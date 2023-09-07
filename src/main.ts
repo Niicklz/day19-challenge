@@ -12,6 +12,7 @@ buttonThemeChange.addEventListener("click", () => {
   document.getElementById("lane2")!.classList.toggle("white-theme");
   document.getElementById("lane3")!.classList.toggle("white-theme");
   document.getElementById("hour")!.classList.toggle("dark-letters");
+  document.getElementById("day")!.classList.toggle("dark-date")
   document.getElementById("secondsCircle")!.classList.toggle("white-theme");
   buttonThemeChange.classList.toggle("white-theme");
   btnClassList.contains("white-theme")
@@ -59,7 +60,8 @@ const getFullMonth = () => {
   return monthsOfTheYear[month].toUpperCase();
 };
 const fixedMinutes = (minutes: string) => minutes.length === 1 ? `0${minutes}` : minutes;
-document.getElementById("date")!.textContent = `${getFullDay()}, ${getFullMonth()} ${date.getDate()}`;
+document.getElementById("month")!.textContent = `${getFullDay()}, ${getFullMonth()}`;
+document.getElementById("day")!.textContent = `${date.getDate()}`
 document.getElementById("hour")!.textContent = `${hourWithoutTransform}:${fixedMinutes(minutes.toString())} ${getAMPMHour()}`;
 document.getElementById("minutesCircle")!.style.transform = `rotate(${270 + 6 * minutes}deg)`;
 document.getElementById("hourCircle")!.style.transform = `rotate(${270 + hour * 30}deg)`;
@@ -68,7 +70,8 @@ setInterval(() => {
   hour = getHours12();
   seconds = new Date().getSeconds();
   minutes = new Date().getMinutes();
-  document.getElementById("date")!.textContent = `${getFullDay()}, ${getFullMonth()} ${date.getDate()}`;
+  document.getElementById("month")!.textContent = `${getFullDay()}, ${getFullMonth()}`;
+  document.getElementById("day")!.textContent = `${date.getDate()}`
   document.getElementById("hour")!.textContent = `${hourWithoutTransform}:${fixedMinutes(minutes.toString())} ${getAMPMHour()}`;
   document.getElementById("minutesCircle")!.style.transform = `rotate(${270 + 6 * minutes}deg)`;
   document.getElementById("hourCircle")!.style.transform = `rotate(${270 + hour * 30}deg)`;

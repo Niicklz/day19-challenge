@@ -2,7 +2,7 @@ const date = new Date();
 let seconds: number = new Date().getSeconds()
 let hour:number = getHours12();
 let minutes: number = date.getMinutes();
-const hourWithoutTransform = new Date().getHours().toString();
+let hourWithoutTransform = new Date().getHours().toString();
 const buttonThemeChange = document.getElementById(
   "theme"
 )! as HTMLButtonElement;
@@ -70,6 +70,7 @@ setInterval(() => {
   hour = getHours12();
   seconds = new Date().getSeconds();
   minutes = new Date().getMinutes();
+  hourWithoutTransform = new Date().getHours().toString()
   document.getElementById("month")!.textContent = `${getFullDay()}, ${getFullMonth()}`;
   document.getElementById("day")!.textContent = `${date.getDate()}`
   document.getElementById("hour")!.textContent = `${hourWithoutTransform}:${fixedMinutes(minutes.toString())} ${getAMPMHour()}`;
